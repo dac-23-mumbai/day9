@@ -1,7 +1,9 @@
-// How to read a file using NodeJS?
-// this is a internal module.
-import { readFileSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 
-let filePath = "/Users/research/Desktop/day9/package.json";
-let fileData = readFileSync(filePath, { encoding: "utf-8" });
-console.log(fileData);
+async function main() {
+  let filePath = "/Users/research/Desktop/day9/package.json";
+  let fileData = await readFile(filePath, { encoding: "utf-8" });
+  console.log(fileData);
+}
+
+main();
