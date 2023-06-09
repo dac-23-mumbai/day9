@@ -1,4 +1,4 @@
 import { sum } from "./calc.js";
 
-let output = sum(1, 1);
+let output = sum(10, 10);
 console.log("sum=" + output);
